@@ -1,0 +1,228 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 12, 2017, 5:36:40 PM
+    Author     : Borhanuddin Bin Haji Ahmad
+*/
+
+.cover-jata {
+    background-image: url(../images/Jata%20Negara%20-%20cover.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cover-right {
+    background-position: right;
+}
+
+/* Mdi Theme and Background */
+/* Theme */
+.theme-mdi .navbar {
+  background-color: #499799; }
+
+.theme-mdi .navbar-brand {
+  color: #fff; }
+  .theme-mdi .navbar-brand:hover {
+    color: #fff; }
+  .theme-mdi .navbar-brand:active {
+    color: #fff; }
+  .theme-mdi .navbar-brand:focus {
+    color: #fff; }
+
+.theme-mdi .nav > li > a {
+  color: #fff; }
+  .theme-mdi .nav > li > a:hover {
+    background-color: transparent; }
+  .theme-mdi .nav > li > a:focus {
+    background-color: transparent; }
+
+.theme-mdi .nav .open > a {
+  background-color: transparent; }
+  .theme-mdi .nav .open > a:hover {
+    background-color: transparent; }
+  .theme-mdi .nav .open > a:focus {
+    background-color: transparent; }
+
+.theme-mdi .bars {
+  color: #fff; }
+
+.theme-mdi .sidebar .menu .list li.active {
+  background-color: transparent; }
+  .theme-mdi .sidebar .menu .list li.active > :first-child i, .theme-mdi .sidebar .menu .list li.active > :first-child span {
+    color: #499799; }
+
+.theme-mdi .sidebar .menu .list .toggled {
+  background-color: transparent; }
+
+.theme-mdi .sidebar .menu .list .ml-menu {
+  background-color: transparent; }
+
+.theme-mdi .sidebar .legal {
+  background-color: #fff; }
+  .theme-mdi .sidebar .legal .copyright a {
+    color: #499799 !important; }
+
+/* Background */
+.bg-mdi {
+  background-color: #499799 !important;
+  color: #fff; }
+  .bg-mdi .content .text,
+  .bg-mdi .content .number {
+    color: #fff !important; }
+
+  .card .bg-mdi {
+    border-bottom: none !important;
+    color: #fff !important; }
+
+    .card .bg-mdi h2,
+    .card .bg-mdi small,
+    .card .bg-mdi .material-icons {
+      color: #fff !important; }
+
+    .card .bg-mdi .badge {
+      background-color: #fff;
+      color: #555; }
+
+.breadcrumb-bg-mdi {
+  background-color: #499799 !important; }
+  .breadcrumb-bg-mdi li {
+    color: #fff !important; }
+    .breadcrumb-bg-mdi li a {
+      color: #fff;
+      font-weight: bold; }
+      .breadcrumb-bg-mdi li a .material-icons {
+        padding-bottom: 8px; }
+  .breadcrumb-bg-mdi li + li:before {
+    color: #fff; }
+
+.list-group .list-group-bg-mdi {
+  background-color: #499799;
+  border: none;
+  color: #fff; }
+  .list-group .list-group-bg-mdi:hover, .list-group .list-group-bg-mdi:focus {
+    background-color: #499799;
+    color: #fff;
+    opacity: 0.8; }
+
+/* Column */
+.col-mdi .navbar .navbar-brand,
+.col-mdi .navbar .navbar-brand:hover,
+.col-mdi .navbar .navbar-brand:active,
+.col-mdi .navbar .navbar-brand:focus {
+  color: #fff; }
+
+.col-mdi .navbar .nav > li > a:hover,
+.col-mdi .navbar .nav > li > a:focus,
+.col-mdi .navbar .nav .open > a,
+.col-mdi .navbar .nav .open > a:hover,
+.col-mdi .navbar .nav .open > a:focus {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.col-mdi .navbar .nav > li > a {
+  color: #fff; }
+
+.col-mdi .navbar .bars {
+  float: left;
+  padding: 10px 20px;
+  font-size: 22px;
+  color: #fff;
+  margin-right: 10px;
+  margin-left: -10px;
+  margin-top: 4px; }
+
+.col-mdi .navbar .bars:hover {
+  background-color: rgba(0, 0, 0, 0.08); }
+
+.col-mdi {
+  color: #499799 !important; }
+
+[type="checkbox"]:checked.chk-col-mdi + label:before {
+  border-right: 2px solid #499799;
+  border-bottom: 2px solid #499799; }
+
+[type="checkbox"].filled-in:checked.chk-col-mdi + label:after {
+  border: 2px solid #499799;
+  background-color: #499799; }
+
+[type="radio"].radio-col-mdi:checked + label:after {
+  background-color: #499799;
+  border-color: #499799; }
+
+[type="radio"].with-gap.radio-col-mdi:checked + label:before {
+  border: 2px solid #499799; }
+
+[type="radio"].with-gap.radio-col-mdi:checked + label:after {
+  background-color: #499799;
+  border: 2px solid #499799; }
+
+  .switch label input[type=checkbox]:checked:not(:disabled) ~ .lever.switch-col-mdi:active:after {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 150, 136, 0.1); }
+  .switch label input[type=checkbox]:checked + .lever.switch-col-mdi {
+    background-color: rgba(0, 150, 136, 0.5); }
+    .switch label input[type=checkbox]:checked + .lever.switch-col-mdi:after {
+      background-color: #499799; }
+
+.nav-tabs.tab-col-mdi > li > a:before {
+  border-bottom: 2px solid #499799; }
+
+.modal-col-mdi {
+  background-color: #499799; }
+  .modal-col-mdi .modal-body,
+  .modal-col-mdi .modal-title {
+    color: #fff !important; }
+  .modal-col-mdi .modal-footer {
+    background-color: rgba(0, 0, 0, 0.12); }
+    .modal-col-mdi .modal-footer .btn-link {
+      color: #fff !important; }
+      .modal-col-mdi .modal-footer .btn-link:hover, .modal-col-mdi .modal-footer .btn-link:active, .modal-col-mdi .modal-footer .btn-link:focus {
+        background-color: rgba(0, 0, 0, 0.12); }
+
+.panel-group .panel-col-mdi {
+  border: 1px solid #499799; }
+  .panel-group .panel-col-mdi .panel-title {
+    background-color: #499799 !important;
+    color: #fff; }
+  .panel-group .panel-col-mdi .panel-body {
+    border-top-color: transparent !important; }
+
+.full-body .panel-col-mdi .panel-body {
+  border-top-color: #fff !important;
+  background-color: #499799;
+  color: #fff; }
+
+.breadcrumb-col-mdi li a {
+  color: #499799 !important;
+  font-weight: bold; }
+
+
+.col-mdi .navbar .navbar-brand,
+.col-mdi .navbar .navbar-brand:hover,
+.col-mdi .navbar .navbar-brand:active,
+.col-mdi .navbar .navbar-brand:focus {
+  color: #fff; }
+
+.col-mdi .navbar .nav > li > a:hover,
+.col-mdi .navbar .nav > li > a:focus,
+.col-mdi .navbar .nav .open > a,
+.col-mdi .navbar .nav .open > a:hover,
+.col-mdi .navbar .nav .open > a:focus {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.col-mdi .navbar .nav > li > a {
+  color: #fff; }
+
+.col-mdi .navbar .bars {
+  float: left;
+  padding: 10px 20px;
+  font-size: 22px;
+  color: #fff;
+  margin-right: 10px;
+  margin-left: -10px;
+  margin-top: 4px; }
+
+.col-mdi .navbar .bars:hover {
+  background-color: rgba(0, 0, 0, 0.08); }
+

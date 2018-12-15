@@ -1,0 +1,98 @@
+# v1.0.3
+- Public View
+-- add query staf_status = 'Aktif' to class Model_carian
+-- create new color scheme theme-mdi, bg-mdi and col-mdi based on teal color scheme [css/custom.css]
+-- change colour theme from bg-deep-orange to bg-mdi [views/carian.php],[views/media_object.php],[views/utama.php]
+-- change colour theme from theme-deep-orange to theme-mdi [views/template/AdminBSB/default.php],[views/template/AdminBSB/pentadbir.php]
+-- change btn-primary to bg-mdi
+    [views/utama.php],
+    [views/pentadbir/organisasi_kemaskini.php],
+    [views/pentadbir/organisasi_tambah.php],
+    [views/pentadbir/penjawatan_kemaskini.php],
+    [views/pentadbir/penjawatan_tambah.php],
+    [views/pentadbir/profail_kemaskini_penjawatan.php],
+    [views/pentadbir/profail_kemaskini_staf.php],
+    [views/pentadbir/staf_kemaskini.php],
+    [views/pentadbir/staf_tambah.php],
+    [views/template/AdminBSB/logmasuk.php],
+    [js/organisasi.js],
+    [js/penjawatan.js],
+    [js/staf.js]
+-- add samb next to No. Telefon [views/media_object.php]
+
+- Pentadbir
+-- Change all no tel input mask from 99-9999 999[9 999] to 9{2}-9{4} 9{1,4}[ 9{1,4}]
+-- Adjust input column size penjawatan_kemaskini.php and organisasi_kemaskini.php for gred, and hirarki from 2 to 1
+-- Add samb. column beside No Tel in [views/penjawatan_kemaskini.php][views/organisasi_kemaskini.php]
+-- penjawatan.js add sambung no telefon
+-- [views/carian.php][views/media_object.php] add samb next to phone no
+-- [models/Model_carian.php] add pjwn_tel_samb in function get_carian_staf sql variable
+-- [models/Model_pentadbir.php] add pjwn_tel_samb in function _penjawatan_kemaskini, get_penjawatan, set_penjawatan
+-- add custom.css in template [views/template/AdminBSB/pentadbir.php],[views/template/AdminBSB/logmasuk.php]
+-- add class bg-mdi in <body> [views/template/AdminBSB/logmasuk.php]
+-- change col-orange to col-mdi in h1 [views/pentadbir/dashboard.php]
+-- update plugins jquery-inputmask
+-- add class tel and remove data-inputmask in input
+    [views/pentadbir/penjawatan_kemaskini.js]
+    [views/pentadbir/organisasi_kemaskini.js]
+    [views/pentadbir/penjawatan_tambah.js]
+    [views/pentadbir/organisasi_tambah.js]
+-- add Inputmask
+    [js/penjawatan_kemaskini.js]
+    [js/penjawatan_tambah.js]
+    [js/organisasi_kemaskini.js]
+    [js/organisasi_tambah.js]
+-- add or condition in regex no. telefon [controllers/Pentadbir.php]
+
+Database update 1.0.1
+-- add samb to phone no in table kumpulan, organisasi and penjawatan
+--- varchar(20) Allow NULL
+
+# v1.0.2
+=======
+
+- Public View
+-- add ORDER BY pjwn_hirarki at model get_penjawatan [models/Model_directori.php]
+-- add text-transform: uppercase; to staff name [views/media_object.php][views/carian.php]
+-- table remove gred, taraf dan penjawatan staf [views/media_object.php]
+-- add full path organisasi name to search staf [models/Model_carian.php][view/carian.js]
+-- add full path organisasi name to search bahagian [models/Model_carian.php][view/carian.js]
+
+- Pentadbir
+-- fix unable to delete image file name with space, add urldecode inside unlink [controllers/Pentadbir.php]
+-- fix image not display when image file name with space, add replace space with %20 [js/gambar.js]
+-- add javascript global var base_url based on ci base_url [views/template/AdminBSB/pentadbir.php][views/template/AdminBSB/default.php]
+-- remove javascript base_url code [js/organisasi.js][js/form.js][js/gambar.js][js/penjawatan.js][js/staf.js]
+-- remove $CountParent and replace with array_search method to determine the parent index position [models/Model_pentadbir.php]
+-- add select organisasi at penjawatan table [controller/Pentadbir.php][views/pejawatan.php][models/Model_pentadbir.php][js/penjawatan.php]
+-- add full path organisasi name to penjawatan table [models/Model_pentadbir.php][js/penjawatan.js]
+-- add full path organisasi name to organisasi table [models/Model_pentadbir.php][js/organisasi.js]
+
+- config
+-- remove index.php [config/config.php]
+
+# v1.0.1
+=======
+- Public View
+-- Remove Jawatan from card header [views/media_object.php]
+-- Remove Gred and Taraf, replace with Jawatan inside media-body [views/media_object.php]
+-- Adjust image size from width="138" height="197" to width="100" height="143" [views/media_object.php]
+-- add class="text-center text-uppercase" to h3 [views/utama.php]
+-- move organisasi details from below block if (!empty($penjawatan)) to top, available to all view [views/media_object.php]
+-- Adjust display for Organisasi details [views/media_object.php]
+-- Add Card Header Color [view/media_object.php],[view/carian.php]
+-- Add file custom.css and load in default template [views/AdminBSB/default.php]
+-- Add cover class name in custom.css [css/custom.css]
+-- add css cover-jata cover-right inside div.body [views/media_object.php],[view/carian.php]
+-- add exit after gambar muatnaik [controllers/pentadbir.php]
+-- add $("#DropzoneReset") [js/gambar.js]
+-- add reset at header-dropdown [views/pentadbir/gambar.php]
+-- change colour theme from bg-red to bg-deep-orange [views/carian.php],[views/media_object.php],[views/utama.php]
+-- change colour theme from theme-red to theme-deep-range [views/default.php][views/pentadbir.php]
+-- change scrollWidth: '4px' to 8px [js/admin.js]
+
+- Admin View
+-- Add Nama Pegawai inside penjawatan table list [views/pentadbir/penjawatan.php][js/penjawatan.js]
+
+- Server Setting
+-- set folder /var/www/direktori/images/staf group to webgroup [1002] recursively
