@@ -41,6 +41,55 @@
             <?php if (!empty($penjawatan)) { ?>
             <div id="paparan_kad">
                 <?php
+                $pjwn_key = 0;
+                $size_pjwn = sizeof($penjawatan);
+                for ($i=0; $i < $size_pjwn; $i++) {
+                    if (1 == $penjawatan[$i]->pjwn_hirarki) {
+                        $pjwn_key = $i;
+                        break;
+                    }
+                }
+                $pjwn_ketua = $penjawatan[$pjwn_key];
+                unset($penjawatan[$pjwn_key]);
+                if (1 == $pjwn_ketua->pjwn_hirarki) {
+                ?>
+                <div class="row clearfix">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <div class="card">
+                            <div class="header bg-mdi">
+                                <h2 style="text-transform: uppercase;">
+                                    <?php echo (empty($pjwn_ketua->staf_nama)) ? $kosong : "{$pjwn_ketua->staf_gelaran} {$pjwn_ketua->staf_nama}"; ?>
+                                </h2>
+                            </div>
+                            <div class="body cover-jata cover-right">
+                                <div class="media" style="margin-bottom: 0px;">
+                                    <div class="media-left">
+                                        <a href="javascript:void(0);">
+                                            <?php
+                                            $NamaImg = explode("@", $pjwn_ketua->staf_emel);
+                                            $StafImage = "images/staf/{$NamaImg[0]}.jpg";
+                                            $StafImage = (@getimagesize($StafImage)) ? base_url($StafImage) : $StafImage = base_url('images/staf/kosong.png');
+                                            ?>
+                                            <img class="media-object img-thumbnail" src="<?php echo $StafImage; ?>" width="100" height="143">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <dl style="margin-bottom: 0px;">
+                                            <dt>Jawatan</dt>
+                                            <dd style="word-break: break-all;"><p><?php echo (empty($pjwn_ketua->pjwn_gelaran)) ? $kosong : $pjwn_ketua->pjwn_gelaran; ?></p></dd>
+                                            <dt>No. Telefon</dt>
+                                            <dd style="word-break: break-all;"><p><?php echo (empty($pjwn_ketua->pjwn_tel)) ? $kosong : $pjwn_ketua->pjwn_tel; ?><?php echo (empty($pjwn_ketua->pjwn_tel_samb)) ? '' : " samb. {$pjwn_ketua->pjwn_tel_samb}"; ?></p></dd>
+                                            <dt>Emel</dt>
+                                            <dd style="word-break: break-all;"><p><?php echo (empty($pjwn_ketua->staf_emel)) ? $kosong : $pjwn_ketua->staf_emel; ?></p></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+                <?php
                 $penjawatan_chunk = array_chunk($penjawatan, 2);
                 foreach ($penjawatan_chunk as $pjwn_chunk) {
                 ?>
