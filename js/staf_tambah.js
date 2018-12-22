@@ -6,9 +6,9 @@
 
 $(function () {
     
-    $(":input").inputmask({ greedy: false });
+    $(".MyKad").inputmask({ mask: "999999-99-9999", greedy: false });
     
-    //Textare auto growth
+    // Textarea auto growth
     autosize($('textarea.auto-growth'));
     
     $(".typeahead").focus(function () {

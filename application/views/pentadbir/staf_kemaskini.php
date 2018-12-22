@@ -54,7 +54,7 @@
                                             $error = (empty(form_error($FormName))) ? '' : ' error';
                                             ?>
                                             <div class="form-line<?php echo $focused . $error; ?>">
-                                                <input id="inpMyKad" name="inpMyKad" type="text" class="form-control" value="<?php echo $value; ?>" data-inputmask="'mask': '999999-99-9999'">
+                                                <input id="inpMyKad" name="inpMyKad" type="text" class="form-control MyKad" value="<?php echo $value; ?>">
                                                 <label class="form-label">MyKad</label>
                                             </div>
                                             <?php echo form_error($FormName, "<label class=\"error\" for=\"$FormName\">", '</label>'); ?>
