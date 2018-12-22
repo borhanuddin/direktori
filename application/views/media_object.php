@@ -44,14 +44,14 @@
                 $pjwn_key = 0;
                 $size_pjwn = sizeof($penjawatan);
                 for ($i=0; $i < $size_pjwn; $i++) {
-                    if (1 == $penjawatan[$i]->pjwn_hirarki) {
+                    if (0 == $penjawatan[$i]->pjwn_hirarki) {
                         $pjwn_key = $i;
                         break;
                     }
                 }
                 $pjwn_ketua = $penjawatan[$pjwn_key];
                 unset($penjawatan[$pjwn_key]);
-                if (1 == $pjwn_ketua->pjwn_hirarki) {
+                if (0 == $pjwn_ketua->pjwn_hirarki) {
                 ?>
                 <div class="row clearfix">
                     <div class="col-sm-6 col-sm-offset-3">
