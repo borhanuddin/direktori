@@ -78,7 +78,16 @@
                         <div class="card">
                             <div class="header bg-mdi">
                                 <h2 style="text-transform: uppercase;">
-                                    <?php echo (empty($pjwn->staf_nama)) ? $kosong : $pjwn->staf_nama; ?>
+                                    <?php
+                                    if (empty($pjwn->staf_nama)) {
+                                        echo $kosong;
+                                    } else {
+                                        if (!empty($pjwn->staf_gelaran)) {
+                                            echo "{$pjwn->staf_gelaran} ";
+                                        }
+                                        echo $pjwn->staf_nama;
+                                    }
+                                    ?>
                                 </h2>
                             </div>
                             <div class="body cover-jata cover-right">
