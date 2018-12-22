@@ -14,6 +14,7 @@ class Model_carian extends CI_Model {
         if (empty($carian)) {
             return NULL;
         } else {
+            $carian = $this->db->escape_like_str($carian);
             $sql = "SELECT 
      po.org_id AS po_org_id,
      po.org_nama AS po_org_nama,
@@ -52,6 +53,7 @@ WHERE
         if (empty($carian)) {
             return NULL;
         } else {
+            $carian = $this->db->escape_like_str($carian);
             $sql = "SELECT 
 	o.org_id, 
 	o.org_sub_org_id, 
