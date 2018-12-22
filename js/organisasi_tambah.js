@@ -6,10 +6,9 @@
 
 $(function () {
     
-    $(":input").inputmask({ greedy: false });
-    Inputmask(["989-999 9{1,4}[ 9{1,4}]","99-9999 9{1,4}[ 9{1,4}]"]).mask($(".tel"));
+    $(".tel").inputmask({ mask: ["999-999 9{1,4}[ 9{1,4}]","99-9999 9{1,4}[ 9{1,4}]"], greedy: false });
     
-    //Textare auto growth
+    // Textarea auto growth
     autosize($('textarea.auto-growth'));
     
     $(".typeahead").focus(function () {

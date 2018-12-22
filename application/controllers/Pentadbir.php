@@ -482,7 +482,8 @@ class Pentadbir extends CI_Controller {
             'Bootstrap Select Plugin Js' => 'plugins/bootstrap-select/js/bootstrap-select.js',
             'SweetAlert Plugin Js' => 'plugins/sweetalert/sweetalert.min.js',
             'Input Mask Plugin Js' => 'plugins/jquery-inputmask/jquery.inputmask.bundle.js',
-            'Autosize Plugin Js' => 'plugins/autosize/autosize.js'
+            'Typeahead Js' => 'plugins/bootstrap3-typeahead/bootstrap3-typeahead.min.js',
+            'Autosize Plugin Js' => 'plugins/autosize/autosize.min.js'
         ];
         $customCSS = ['css/form.css'];
         $customJS = ['js/organisasi_tambah.js'];
