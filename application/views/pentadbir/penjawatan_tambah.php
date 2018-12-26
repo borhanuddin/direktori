@@ -42,7 +42,7 @@
                                             <?php echo form_error($FormName, "<label class=\"error\" for=\"$FormName\">", '</label>'); ?>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-1">
                                         <div class="form-group form-float">
                                             <?php
                                             $FormName = 'inpGred';
@@ -57,7 +57,7 @@
                                             <?php echo form_error($FormName, "<label class=\"error\" for=\"$FormName\">", '</label>'); ?>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
+                                    <div class="col-sm-1">
                                         <div class="form-group form-float">
                                             <?php
                                             $FormName = 'inpHirarki';
@@ -83,6 +83,21 @@
                                             <div class="form-line<?php echo $focused . $error; ?>">
                                                 <input id="inpTel" name="inpTel" type="text" class="form-control tel" value="<?php echo $value; ?>">
                                                 <label class="form-label">No. Telefon</label>
+                                            </div>
+                                            <?php echo form_error($FormName, "<label class=\"error\" for=\"$FormName\">", '</label>'); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group form-float">
+                                            <?php
+                                            $FormName = 'inpTelSamb';
+                                            $value = (empty(set_value($FormName))) ? '' : set_value($FormName);
+                                            $focused = (empty($value) && !is_numeric($value)) ? '' : ' focused';
+                                            $error = (empty(form_error($FormName))) ? '' : ' error';
+                                            ?>
+                                            <div class="form-line<?php echo $focused . $error; ?>">
+                                                <input id="inpTelSamb" name="inpTelSamb" type="text" class="form-control telsamb" value="<?php echo $value; ?>" title="Tekan butang [space bar] untuk no. seterusnya">
+                                                <label class="form-label">Sambungan</label>
                                             </div>
                                             <?php echo form_error($FormName, "<label class=\"error\" for=\"$FormName\">", '</label>'); ?>
                                         </div>

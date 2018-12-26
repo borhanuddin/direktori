@@ -186,6 +186,7 @@ ORDER BY org_sub_org_id IS NULL DESC , org_sub_org_id ASC , org_hirarki ASC , or
     parent.org_poskod,
     parent.org_negeri,
     parent.org_tel,
+    parent.org_tel_samb,
     parent.org_fax,
     parent.org_emel,
     parent.org_papar_sub,
@@ -225,6 +226,7 @@ GROUP BY org_id");
                     'org_poskod' => (empty($row->org_poskod)) ? '' : $row->org_poskod,
                     'org_negeri' => (empty($row->org_negeri)) ? '' : $row->org_negeri,
                     'org_tel' => (empty($row->org_tel)) ? '' : $row->org_tel,
+                    'org_tel_samb' => (empty($row->org_tel_samb)) ? '' : $row->org_tel_samb,
                     'org_fax' => (empty($row->org_fax)) ? '' : $row->org_fax,
                     'org_emel' => (empty($row->org_emel)) ? '' : $row->org_emel,
                     'org_papar_sub' => $row->org_papar_sub,
@@ -608,6 +610,7 @@ ORDER BY org_sub_org_id IS NULL DESC , org_hirarki DESC , org_nama ASC , org_id 
             $org_negeri = '';
             $org_negara = '';
             $org_tel = '';
+            $org_tel_samb = '';
             $org_fax = '';
             $org_emel = '';
             $org_hirarki = '';
@@ -627,6 +630,7 @@ ORDER BY org_sub_org_id IS NULL DESC , org_hirarki DESC , org_nama ASC , org_id 
     org_negeri, 
     org_negara, 
     org_tel, 
+    org_tel_samb, 
     org_fax, 
     org_emel, 
     org_hirarki, 
@@ -642,6 +646,7 @@ VALUES
     {$this->_sqldata($org_negeri)}, 
     {$this->_sqldata($org_negara)}, 
     {$this->_sqldata($org_tel)}, 
+    {$this->_sqldata($org_tel_samb)}, 
     {$this->_sqldata($org_fax)}, 
     {$this->_sqldata($org_emel)}, 
     {$this->_sqldata($org_hirarki, FALSE, 0)}, 
@@ -658,6 +663,7 @@ SET
     org_negeri = {$this->_sqldata($org_negeri)}, 
     org_negara = {$this->_sqldata($org_negara)}, 
     org_tel = {$this->_sqldata($org_tel)}, 
+    org_tel_samb = {$this->_sqldata($org_tel_samb)}, 
     org_fax = {$this->_sqldata($org_fax)}, 
     org_emel = {$this->_sqldata($org_emel)}, 
     org_hirarki = {$this->_sqldata($org_hirarki, FALSE)}, 

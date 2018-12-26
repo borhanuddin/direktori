@@ -96,7 +96,7 @@
                                             $error = (empty(form_error($FormName))) ? '' : ' error';
                                             ?>
                                             <div class="form-line<?php echo $focused . $error; ?>">
-                                                <input id="inpTelSamb" name="inpTelSamb" type="text" class="form-control" value="<?php echo $value; ?>" data-inputmask="'mask': '9{1,4}[ / 9{1,4}][ / 9{1,4}][ / 9{1,4}]'" title="Tekan butang [space bar] untuk no. seterusnya">
+                                                <input id="inpTelSamb" name="inpTelSamb" type="text" class="form-control telsamb" value="<?php echo $value; ?>" title="Tekan butang [space bar] untuk no. seterusnya">
                                                 <label class="form-label">Sambungan</label>
                                             </div>
                                             <?php echo form_error($FormName, "<label class=\"error\" for=\"$FormName\">", '</label>'); ?>

@@ -59,7 +59,7 @@ class Model_direktori extends CI_Model {
         if (empty($id)) {
             return false;
         } else {
-            $query = $this->db->query("SELECT org_alamat, org_poskod, org_negeri, org_tel, org_fax, org_emel FROM organisasi WHERE org_id = $id");
+            $query = $this->db->query("SELECT org_alamat, org_poskod, org_negeri, org_tel, org_tel_samb, org_fax, org_emel, org_catatan FROM organisasi WHERE org_id = $id");
             return $query->row();
         }
     }

@@ -29,9 +29,15 @@
                         if (!empty($alamat->org_alamat)) { echo "<div>" . nl2br($alamat->org_alamat) . "</div>"; }
                         if (!empty($alamat->org_poskod) or !empty($alamat->org_negeri)) { echo "<div>{$alamat->org_poskod} {$alamat->org_negeri}</div>"; }
                         if ((!empty($alamat->org_tel)) or (!empty($alamat->org_fax)) or (!empty($alamat->org_emel))) { echo "<br />" ;}
-                        if (!empty($alamat->org_tel)) { echo "<div>Tel: {$alamat->org_tel}</div>"; }
+                        if (!empty($alamat->org_tel)) {
+                            echo "<div>";
+                            echo "Tel: {$alamat->org_tel}";
+                            if (!empty($alamat->org_tel_samb)) { echo " samb: {$alamat->org_tel_samb}"; }
+                            echo "</div>";
+                        }
                         if (!empty($alamat->org_fax)) { echo "<div>Fax: {$alamat->org_fax}</div>"; }
-                        if (!empty($alamat->org_emel)) { echo "E-Mel: {$alamat->org_emel}<br />"; }
+                        if (!empty($alamat->org_emel)) { echo "<div>E-Mel: {$alamat->org_emel}</div>"; }
+                        if (!empty($alamat->org_catatan)) { echo "<br /><div>{$alamat->org_catatan}</div>"; }
                         echo "</small>";
                         }
                         ?></h3>

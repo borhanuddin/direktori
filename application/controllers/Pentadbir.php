@@ -442,6 +442,7 @@ class Pentadbir extends CI_Controller {
         $this->form_validation->set_rules('inpNegeri', 'Negeri', 'trim');
         $this->form_validation->set_rules('inpNegara', 'Negara', 'trim');
         $this->form_validation->set_rules('inpTel', 'No. Telefon', 'trim|regex_match[/^((\d{2}-\d{4}|\d{3}-\d{3}) \d{3,4} ?\d{0,4})$/]');
+        $this->form_validation->set_rules('inpTelSamb', 'Sambungan', 'trim');
         $this->form_validation->set_rules('inpFax', 'No. Faks', 'trim|regex_match[/^((\d{2}-\d{4}|\d{3}-\d{3}) \d{3,4} ?\d{0,4})$/]');
         $this->form_validation->set_rules('inpEmel', 'Emel', 'trim|valid_email');
         $this->form_validation->set_rules('inpHirarki', 'Hirarki', 'trim|is_natural');
@@ -457,6 +458,7 @@ class Pentadbir extends CI_Controller {
                 'org_negeri' => $this->input->post('inpNegeri'),
                 'org_negara' => $this->input->post('inpNegara'),
                 'org_tel' => $this->input->post('inpTel'),
+                'org_tel_samb' => $this->input->post('inpTelSamb'),
                 'org_fax' => $this->input->post('inpFax'),
                 'org_emel' => $this->input->post('inpEmel'),
                 'org_hirarki' => $this->input->post('inpHirarki'),
@@ -514,6 +516,7 @@ class Pentadbir extends CI_Controller {
         $this->form_validation->set_rules('inpNegeri', 'Negeri', 'trim');
         $this->form_validation->set_rules('inpNegara', 'Negara', 'trim');
         $this->form_validation->set_rules('inpTel', 'No. Telefon', 'trim|regex_match[/^((\d{2}-\d{4}|\d{3}-\d{3}) \d{3,4} ?\d{0,4})$/]');
+        $this->form_validation->set_rules('inpTelSamb', 'Sambungan', 'trim');
         $this->form_validation->set_rules('inpFax', 'No. Faks', 'trim|regex_match[/^((\d{2}-\d{4}|\d{3}-\d{3}) \d{3,4} ?\d{0,4})$/]');
         $this->form_validation->set_rules('inpEmel', 'Emel', 'trim|valid_email');
         $this->form_validation->set_rules('inpHirarki', 'Hirarki', 'trim|is_natural');
@@ -530,6 +533,7 @@ class Pentadbir extends CI_Controller {
                 'org_negeri' => $this->input->post('inpNegeri'),
                 'org_negara' => $this->input->post('inpNegara'),
                 'org_tel' => $this->input->post('inpTel'),
+                'org_tel_samb' => $this->input->post('inpTelSamb'),
                 'org_fax' => $this->input->post('inpFax'),
                 'org_emel' => $this->input->post('inpEmel'),
                 'org_hirarki' => $this->input->post('inpHirarki'),
@@ -626,6 +630,7 @@ class Pentadbir extends CI_Controller {
         $this->form_validation->set_rules('inpGred', 'Gred', 'trim');
         $this->form_validation->set_rules('inpHirarki', 'Hirarki', 'trim|is_natural|required');
         $this->form_validation->set_rules('inpTel', 'No. Telefon', 'trim|regex_match[/^((\d{2}-\d{4}|\d{3}-\d{3}) \d{3,4} ?\d{0,4})$/]');
+        $this->form_validation->set_rules('inpTelSamb', 'Sambungan', 'trim');
         $this->form_validation->set_rules('slcStaf', 'Nama Pegawai', 'trim');
         $this->form_validation->set_rules('slcPenyelia', 'Gelaran Penyelia', 'trim');
         $this->form_validation->set_rules('slcOrg', 'Organisasi', 'trim|required');
@@ -639,6 +644,7 @@ class Pentadbir extends CI_Controller {
                 'pjwn_kod' => $this->input->post('inpKod'),
                 'pjwn_gred' => $this->input->post('inpGred'),
                 'pjwn_tel' => $this->input->post('inpTel'),
+                'pjwn_tel_samb' => $this->input->post('inpTelSamb'),
                 'pjwn_org_id' => $this->input->post('slcOrg'),
                 'pjwn_hirarki' => $this->input->post('inpHirarki'),
                 'pjwn_catatan' => $this->input->post('txtCatatan')
@@ -696,7 +702,6 @@ class Pentadbir extends CI_Controller {
         $this->form_validation->set_rules('inpKod', 'Singkatan Gelaran', 'trim|callback__semak_pjwn_kod');
         $this->form_validation->set_rules('inpGred', 'Gred', 'trim');
         $this->form_validation->set_rules('inpHirarki', 'Hirarki', 'trim|is_natural');
-        /*$this->form_validation->set_rules('inpTel', 'No. Telefon', 'trim|regex_match[/^(\d{2}-\d{4} \d{3,4} ?\d{0,4})$/]');*/
         $this->form_validation->set_rules('inpTel', 'No. Telefon', 'trim|regex_match[/^((\d{2}-\d{4}|\d{3}-\d{3}) \d{3,4} ?\d{0,4})$/]');
         $this->form_validation->set_rules('inpTelSamb', 'Sambungan', 'trim');
         $this->form_validation->set_rules('slcStaf', 'Nama Pegawai', 'trim');

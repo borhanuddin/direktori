@@ -7,6 +7,7 @@
 $(function () {
     
     $(".tel").inputmask({ mask: ["999-999 9{1,4}[ 9{1,4}]","99-9999 9{1,4}[ 9{1,4}]"], greedy: false });
+    $(".telsamb").inputmask({ mask: "9{1,4}[ / 9{1,4}][ / 9{1,4}][ / 9{1,4}]", greedy: false });
     
     // Textarea auto growth
     autosize($('textarea.auto-growth'));
